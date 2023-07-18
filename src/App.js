@@ -16,13 +16,8 @@ function App() {
           <li>Close item</li>
           <li>Scroll position should be maintained</li>
         </ul>
-
-        <div>
-          API to use: GET:
-          `https://preprodapi.mypatientspace.com/api/artifact/libraries?page=0&size=20`
-        </div>
         <div style={{ marginTop: 20 }}>
-          This API uses Bearer authentication. Access Token to use:
+          This following APIs use Bearer authentication. Access Token to use:
           <p>
             <pre>
               <code
@@ -33,8 +28,17 @@ function App() {
             </pre>
           </p>
         </div>
+        <div>
+          <strong>API to get a list of libraries:</strong>
+          <pre>
+            <code>
+              GET
+              https://preprodapi.mypatientspace.com/api/artifact/libraries?page=0&size=20
+            </code>
+          </pre>
+        </div>
         <div style={{ marginTop: 20 }}>
-          Response Format:
+          Response Sample:
           <p>
             <pre>
               <code>
@@ -60,6 +64,36 @@ function App() {
                   ]
             }
             }`}
+              </code>
+            </pre>
+          </p>
+        </div>
+        <hr />
+
+        <div>
+          <strong>API to get one library item:</strong>
+          <pre>
+            <code>
+              GET
+              https://preprodapi.mypatientspace.com/api/artifact/libraries/64a2dd0b46d101338d31a4dd
+            </code>
+          </pre>
+        </div>
+        <div style={{ marginTop: 20 }}>
+          Response Sample:
+          <p>
+            <pre>
+              <code>
+                {`
+                {
+                  "id" : "64a2dd0b46d101338d31a4dd",
+                  "createdOn" : 1688395019035,
+                  "lastUpdatedOn" : 1688555751537,
+                  "modifiedByUser" : "stjamesdoctor ",
+                  "name" : "Happy Stars Lottie",
+                  "title" : "Happy Stars Lottie",
+                  "status" : "ACTIVE",
+                }`}
               </code>
             </pre>
           </p>
