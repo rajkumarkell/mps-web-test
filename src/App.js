@@ -13,6 +13,8 @@ function App() {
           <li>Render a list, scrollable/infinite scroll with paging</li>
           <li>Click item in list, show detail in new screen</li>
           <li>Return to list after viewing item</li>
+          <li>Close item</li>
+          <li>Scroll position should be maintained</li>
         </ul>
 
         <div>
